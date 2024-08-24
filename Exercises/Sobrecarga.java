@@ -1,5 +1,8 @@
+/*Paquete Exercises*/
 package Exercises;
 
+
+/*Clase Sobrecarga*/
 public class Sobrecarga {
 
     String nombre;
@@ -26,8 +29,11 @@ public class Sobrecarga {
         public Profesor(String nombre, String materia, int calificacion){
             super(nombre, materia, calificacion);
         }
+
+        /*Se sobreescribe el metodo reprobar()*/
+        @Override
         public String reprobar(){
-            if(this.calificacion>5)
+            if(this.calificacion > 5)
                 return ">:) Sacaste "+this.calificacion+" en " + this.materia;
             else
                 return ":(";
@@ -41,11 +47,14 @@ public class Sobrecarga {
         public Alumno(String nombre, String materia, int calificacion){
             super(nombre, materia, calificacion);
         }
+        /*Se sobreescribe el metodo reprobar()*/
+        @Override
         public String reprobar(){
-
-        }
-        
+            if(this.calificacion < 6)
+                return ":( ";
+            else
+                return ":)";
+        }   
     }
-
 }
 

@@ -18,7 +18,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Tests
-        setup-command: ''
+        setup-command: javac Exercises/*
         command: java Tests.java
         input: ''
         expected-output: 'true'
